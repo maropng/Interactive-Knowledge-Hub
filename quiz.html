@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Trivia Quiz</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="scientific.html">Scientific Facts</a>
+        <a href="history.html">History Highlights</a>
+        <a href="tech.html">Tech Innovations</a>
+    </nav>
+
+    <section>
+        <p class="quiz-question"><strong>Question 1:</strong> What is the powerhouse of the cell?</p>
+        <button onclick="checkAnswer('mitochondria')">Mitochondria</button>
+        <button onclick="checkAnswer('nucleus')">Nucleus</button>
+        <button onclick="checkAnswer('ribosome')">Ribosome</button>
+        <p id="quiz-feedback"></p>
+    </section>
+
+    <footer>
+        <p>© 2025 Interactive Knowledge Hub. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function checkAnswer(answer) {
+            const feedback = document.getElementById('quiz-feedback');
+            if (answer === 'mitochondria') {
+                feedback.textContent = "Correct! Mitochondria are the powerhouse of the cell.";
+                feedback.style.color = 'green';
+            } else {
+                feedback.textContent = "Incorrect. Try again!";
+                feedback.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
